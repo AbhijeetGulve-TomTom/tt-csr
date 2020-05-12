@@ -1,0 +1,7 @@
+@import '../../node_modules/@tomtom-international/web-sdk-maps/dist/maps.css';
+
+#map {
+  height: 85%;
+  width: 97%;
+  position: absolute;
+}

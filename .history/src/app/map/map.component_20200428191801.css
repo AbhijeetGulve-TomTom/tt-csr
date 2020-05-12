@@ -1,0 +1,6 @@
+@import "@tomtom-international/web-sdk-maps";
+
+#map {
+  height: 100%;
+  width: 100%;
+}

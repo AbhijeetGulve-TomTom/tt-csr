@@ -1,0 +1,22 @@
+@import "@tomtom-international/web-sdk-maps/dist/maps.css";
+
+#map {
+  height: 97vh;
+  width: 99vw;
+  position: absolute;
+  border-style: solid;
+  border-radius: 1em;
+}
+
+.popup-width {
+  max-width: none;
+}
+
+#marker {
+  background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  }

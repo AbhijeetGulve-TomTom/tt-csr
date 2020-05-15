@@ -48,20 +48,6 @@ constructor(private http: HttpClient) {}
 
       this.onMapLoad();
 
-    this.getSheetData().subscribe((resp) => {
-      console.log("sheet data response:");
-      const that = this;
-      const requestFeatures = [];
-      const features = [];
-      const featuresPickup = [];
-      const featuresFoodNeeded = [];
-
-      this.processSheetDataResponse(resp, that, featuresPickup, featuresFoodNeeded, features, requestFeatures);
-      this.populateFeatures(featuresPickup, featuresFoodNeeded, features, requestFeatures);
-
-      this.dataLoaded.next(true);
-    });
-
     const popup = new tt.Popup();
 
     const that = this;
@@ -186,6 +172,20 @@ console.log(arr)
             this.plotLayer(this, 'K1', this.featureCollectionForPickup);
             this.plotLayer(this, 'K2', this.featureCollectionForFoodNeeded);
             this.plotLayer(this, 'request', this.featureRequestCollection);
+          });
+
+          this.getSheetData().subscribe((resp) => {
+            console.log("sheet data response:");
+            const that = this;
+            const requestFeatures = [];
+            const features = [];
+            const featuresPickup = [];
+            const featuresFoodNeeded = [];
+      
+            this.processSheetDataResponse(resp, that, featuresPickup, featuresFoodNeeded, features, requestFeatures);
+            this.populateFeatures(featuresPickup, featuresFoodNeeded, features, requestFeatures);
+      
+            this.dataLoaded.next(true);
           });
         });
   }

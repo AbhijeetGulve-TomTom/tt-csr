@@ -24,7 +24,8 @@
     "core-js": "^2.5.4",
     "exceljs": "^3.9.0",
     "rxjs": "6.0.0",
-    "zone.js": "~0.8.26"
+    "web-animations-js": "^2.3.2",
+    "zone.js": "~0.8.26"    
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0",

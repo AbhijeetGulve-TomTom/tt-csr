@@ -17,7 +17,9 @@
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
+ declare const ExcelJS: any;
 
+import * as Excel from 'exceljs/dist/exceljs.min.js';
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 import 'core-js/es6/symbol';
 import 'core-js/es6/object';

@@ -164,7 +164,7 @@ console.log(arr)
   }
 
   onMapLoad() {
-        this.map.on('load', () => {
+        this.map.on('style.load', () => {
           this.loadImages();
 
           this.dataLoaded.subscribe(dataLoad => {
@@ -181,10 +181,10 @@ console.log(arr)
             const features = [];
             const featuresPickup = [];
             const featuresFoodNeeded = [];
-      
+
             this.processSheetDataResponse(resp, that, featuresPickup, featuresFoodNeeded, features, requestFeatures);
             this.populateFeatures(featuresPickup, featuresFoodNeeded, features, requestFeatures);
-      
+
             this.dataLoaded.next(true);
           });
         });

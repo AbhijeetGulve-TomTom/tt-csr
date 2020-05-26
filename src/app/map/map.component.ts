@@ -228,7 +228,7 @@ console.log(arr)
  // tslint:disable-next-line: no-shadowed-variable
  const map = this.map;
  speedCamImgArray.forEach(speedCamImage => {
- map.loadImage('assets/' + speedCamImage + '.png', (error, image) => {
+ map.loadImage('assets/' + speedCamImage + '_new.png', (error, image) => {
  if (error) {
  throw error;
  }

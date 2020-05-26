@@ -191,6 +191,15 @@ console.log(arr)
   }
 
   private plotLayer(that: this, layerName: string, featureCollection: { type: string; features: any[]; }) {
+    console.log(layerName);
+    let zoom16Size = 0.35;
+    let zoom20Size = 0.35;
+    
+    if(layerName == 'request'){
+      zoom16Size = 0.05;
+      zoom20Size = 0.1;
+    }
+
     that.map.addSource(layerName, {
       type: 'geojson',
       data: featureCollection,
@@ -210,11 +219,11 @@ console.log(arr)
                 "stops": [
                     [
                       16,
-                      0.05
+                      zoom16Size
                       ],
                       [
                       20,
-                      0.08
+                      zoom20Size
                       ]
                 ]
       },

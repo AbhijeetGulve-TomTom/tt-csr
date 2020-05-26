@@ -192,8 +192,8 @@ console.log(arr)
 
   private plotLayer(that: this, layerName: string, featureCollection: { type: string; features: any[]; }) {
     console.log(layerName);
-    let zoom16Size = 0.35;
-    let zoom20Size = 0.35;
+    let zoom16Size = 0.33;
+    let zoom20Size = 0.33;
     
     if(layerName == 'request'){
       zoom16Size = 0.05;
@@ -237,7 +237,7 @@ console.log(arr)
  // tslint:disable-next-line: no-shadowed-variable
  const map = this.map;
  speedCamImgArray.forEach(speedCamImage => {
- map.loadImage('assets/' + speedCamImage + '.png', (error, image) => {
+ map.loadImage('assets/' + speedCamImage + '_new.png', (error, image) => {
  if (error) {
  throw error;
  }
